@@ -26,8 +26,6 @@ body {
 }
 
 button {
-    background-color: var();
-    color: var();
     margin-top: 20px;
     padding: 15px 30px;
     cursor: pointer;
@@ -39,7 +37,6 @@ button {
 }
 
 button:hover {
-    background-color: var();
     border-radius: 25%;
     transition: 0.5s;
 }
@@ -47,19 +44,25 @@ button:hover {
 .calculate {
     width: 30%;
     background-color: var(--hover_digit-color);
-    margin: 20px;
     overflow: hidden;
     border-radius: 25px;
+    padding: 40px;
 }
+.calculate .screen {
+    background-color: var(--hover_digit-color);
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    overflow: hidden;
+}
+
 
 .intro {
     margin: 20px;
     color: var(--white-color);
 }
 
-.rows {
-    padding: 30px;
-}
 
 textarea {
     margin: 30px;
@@ -117,6 +120,8 @@ textarea {
     align-items: center;
     justify-content: center;
     background-color: var(--white-color);
+    font-size: 25px;
+    font-weight: 800;
 }
 
 .digits:hover {
@@ -188,14 +193,38 @@ justify-content: space-between;
     padding: 15px;
     width: 60px;
     border-radius: 15px;
+    color: var(--sym-color);
 
 }
 
 .theme {
-    border-radius: 15px;
     float: right;
     width: 100%;
+    border-radius: 0;
     background-color: inherit;
+    transition: none;
+}
+
+.theme:hover {
+    background-color: inherit;
+    border-radius: 0;
+    transition: none;
+}
+
+span {
+    font-weight: bolder;
+    font-size: 2rem;
+    font-size: 3rem;
+    color: var(--white-color);
+}
+
+.light {
+    background-color: var(--white-color);
+}
+
+.theme i.dark {
+    background-color: var(--kng_hover-color);
+    color: var(--white-color);
 }
 
 @media (max-width:768px) {
